@@ -1,0 +1,86 @@
+:root {
+  --color-primary: #f7df1e;
+  --container-max-width: 1200px;
+  --font-family: sans-serif;
+}
+
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+.title{
+  text-align: center;
+  background-color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1rem 0;
+  color: #000;
+}
+
+
+.slider{
+  position: relative;
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.slider-slides{
+  position: relative;
+  height: 400px;
+}
+
+.slider-slide{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slider-slide img{
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  /* object-position: top bottom; */
+}
+
+.slider-slide.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.slider-buttons{
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 2rem);
+  display: flex;
+  justify-content: space-between;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.slider-buttons a{
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  transition: all .3s ease;
+}
+
+.slider-buttons a:hover{
+  color: #4d4d4d;
+}
